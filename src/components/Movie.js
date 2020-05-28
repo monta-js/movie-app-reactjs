@@ -8,7 +8,7 @@ const Movie = props => {
     <div className="col-4">
       
       <div>
-        <img width="200" alt={props.title} src={props.poster} />
+        <img width="250" alt={props.title} src={props.poster} />
         <h2>{props.title} </h2>
         <h2> ({props.year})</h2>
       </div>

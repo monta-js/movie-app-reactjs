@@ -96,19 +96,19 @@ const Main = () => {
 
     return (
         <div class="container">
-  <div class="row">
-    <div class="col-sm mt-30">
-    <button className="btn btn-primary mr-5" onClick={openModal}>Add movie</button>
-    <button className="btn btn-primary" onClick={handleReset}>Reset Filter</button>
+  <div class="row align-items-center " id="header">
+    <div class="col-sm ">
+    <button className="btn btn-danger mr-5" onClick={openModal}>Add movie</button>
+    <button className="btn btn-danger" onClick={handleReset}>Reset Filter</button>
     </div>
-    <div class="col-sm">
-    <label className="btn">Filter by name</label>
+    <div class="col-sm ">
+    <label className="btn ">Filter by name</label>
     <select onChange={handleChangeMovie}>{movies.map((movie) => <option key={movie.title}>{movie.title}</option>)}</select>    </div>
     <div class="col-sm">
     <label className="btn">Filter by rating <span className="star"></span></label>
                     <select value={null} onChange={handleChangeRating}>{movies.map((movie) => <option key={movie.rating}>{movie.rating}</option>)}</select>    </div>
   </div>
-      <div >
+      <div class="row " id="blocpage" >
       <MoviesList movies={listOfMovies} />
       </div>
             <Modal
